@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.Spinner?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox alignment="CENTER" nodeOrientation="LEFT_TO_RIGHT" prefHeight="421.0" prefWidth="370.0" spacing="20.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.equipo.HelloController">
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+    </padding>
+   <Label prefHeight="39.0" prefWidth="155.0" text="EQUIPO" textOverrun="WORD_ELLIPSIS">
+      <font>
+         <Font name="Franklin Gothic Medium" size="27.0" />
+      </font>
+   </Label>
+   <BorderPane nodeOrientation="LEFT_TO_RIGHT" prefHeight="200.0" prefWidth="200.0">
+      <left>
+         <VBox BorderPane.alignment="CENTER">
+            <BorderPane.margin>
+               <Insets top="15.0" />
+            </BorderPane.margin>
+            <children>
+               <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                  <children>
+                  
+                                                    <Label fx:id="welcomeText" prefHeight="17.0" prefWidth="35.0" text="Id" />
+                     <Spinner fx:id="spinnerID" layoutX="80.0" />
+                  </children>
+               </AnchorPane>
+               <Separator orientation="VERTICAL" prefHeight="200.0" />
+               <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                  <children>
+                     <Label fx:id="welcomeText11" prefHeight="17.0" prefWidth="59.0" text="Categoria" />
+                     <ChoiceBox fx:id="ChoiceCat" layoutX="80.0" prefWidth="150.0" />
+                  </children>
+               </AnchorPane>
+               <Separator orientation="VERTICAL" prefHeight="200.0" />
+               <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                  <children>
+                     <Label fx:id="welcomeText1" layoutY="4.0" prefHeight="17.0" prefWidth="57.0" text="Nombre" />
+                     <TextField fx:id="TextNombre" layoutX="80.0" />
+                  </children>
+               </AnchorPane>
+               <Separator orientation="VERTICAL" prefHeight="200.0" />
+               <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                  <children>
+                     <Label fx:id="welcomeText111" prefHeight="17.0" prefWidth="59.0" text="Disponible" />
+                     <CheckBox fx:id="CheckDisponible" layoutX="80.0" mnemonicParsing="false" />
+                  </children>
+               </AnchorPane>
+               <HBox />
+               <FlowPane alignment="TOP_CENTER" columnHalignment="CENTER" nodeOrientation="RIGHT_TO_LEFT" prefHeight="200.0" prefWidth="200.0" />
+            </children>
+         </VBox>
+      </left>
+   </BorderPane>
+   <AnchorPane prefHeight="200.0" prefWidth="200.0">
+      <children>
+         <Button layoutX="100.0" onAction="#onHelloButtonClick" prefHeight="26.0" prefWidth="89.0" text="Salir">
+            <font>
+               <Font size="14.0" />
+            </font>
+         </Button>
+          <Button graphicTextGap="7.0" onAction="#guardar" prefHeight="14.0" prefWidth="83.0" style="-fx-background-color: #1591EA;" text="Guardar" textFill="WHITE">
+            <font>
+               <Font size="14.0" />
+            </font>
+         </Button>
+      </children>
+   </AnchorPane>
+   <BorderPane prefHeight="200.0" prefWidth="200.0" />
+   <AnchorPane prefHeight="200.0" prefWidth="200.0" />
+
+
+</VBox>
