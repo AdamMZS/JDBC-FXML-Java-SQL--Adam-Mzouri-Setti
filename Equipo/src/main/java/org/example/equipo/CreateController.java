@@ -50,10 +50,13 @@ public class CreateController implements Initializable {
     private Label welcomeText;
     @FXML
     private Label welcomeText11;
-
-
+    @FXML
+    private Button SalirButton;
+    @FXML
+    private Button guardarButton;
     //CONFIG TABLA
 
+    @FXML
     private void guardar() {
 
         Alert alerta = new Alert(Alert.AlertType.INFORMATION);
@@ -66,20 +69,17 @@ public class CreateController implements Initializable {
     }
     @FXML
     private void onHelloButtonClick() {
-
         Alert alerta = new Alert(Alert.AlertType.INFORMATION);
         alerta.setContentText("Saliendo");
-        alerta.showAndWait();
         try{
             FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("main-view.fxml"));
             Parent root=fxmlLoader.load();
             Stage stage=new Stage();
             stage.setScene(new Scene(root));
-            stage.close();
+            stage.show();
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
-        alerta.close();
     }
 
 }

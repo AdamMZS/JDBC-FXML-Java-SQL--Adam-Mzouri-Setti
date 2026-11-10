@@ -15,7 +15,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<VBox alignment="CENTER" nodeOrientation="LEFT_TO_RIGHT" prefHeight="421.0" prefWidth="370.0" spacing="20.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.equipo.HelloController">
+<VBox alignment="CENTER" nodeOrientation="LEFT_TO_RIGHT" prefHeight="421.0" prefWidth="370.0" spacing="20.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.equipo.CreateController">
     <padding>
         <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
     </padding>
@@ -67,12 +67,12 @@
    </BorderPane>
    <AnchorPane prefHeight="200.0" prefWidth="200.0">
       <children>
-         <Button layoutX="100.0" onAction="#onHelloButtonClick" prefHeight="26.0" prefWidth="89.0" text="Salir">
+         <Button fx:id="SalirButton" layoutX="100.0" onAction="#onHelloButtonClick" prefHeight="26.0" prefWidth="89.0" text="Salir">
             <font>
                <Font size="14.0" />
             </font>
          </Button>
-          <Button graphicTextGap="7.0" onAction="#guardar" prefHeight="14.0" prefWidth="83.0" style="-fx-background-color: #1591EA;" text="Guardar" textFill="WHITE">
+          <Button fx:id="guardarButton" graphicTextGap="7.0" onAction="#guardar" prefHeight="14.0" prefWidth="83.0" style="-fx-background-color: #1591EA;" text="Guardar" textFill="WHITE">
             <font>
                <Font size="14.0" />
             </font>
