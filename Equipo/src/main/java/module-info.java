@@ -4,6 +4,8 @@ module org.example.equipo {
     requires javafx.fxml;
     requires static lombok;
     requires jdk.compiler;
+    requires java.sql;
+    requires mysql.connector.j;
 
     opens org.example.equipo to javafx.fxml;
     exports org.example.equipo;
