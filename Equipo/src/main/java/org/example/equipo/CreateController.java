@@ -3,9 +3,14 @@ package org.example.equipo;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.*;
+import javafx.stage.Stage;
 
+import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
@@ -47,10 +52,6 @@ public class CreateController implements Initializable {
     private Label welcomeText11;
 
 
-
-
-
-
     //CONFIG TABLA
 
     private void guardar() {
@@ -69,6 +70,15 @@ public class CreateController implements Initializable {
         Alert alerta = new Alert(Alert.AlertType.INFORMATION);
         alerta.setContentText("Saliendo");
         alerta.showAndWait();
+        try{
+            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("main-view.fxml"));
+            Parent root=fxmlLoader.load();
+            Stage stage=new Stage();
+            stage.setScene(new Scene(root));
+            stage.close();
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
         alerta.close();
     }
 

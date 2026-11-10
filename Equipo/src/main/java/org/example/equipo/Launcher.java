@@ -1,6 +1,5 @@
 package org.example.equipo;
 
-import Model.HelloApplication;
 import javafx.application.Application;
 
 public class Launcher {

@@ -18,7 +18,7 @@
             <TableColumn fx:id="IdColumna" prefWidth="75.0" text="ID" />
             <TableColumn fx:id="NombreColumna" prefWidth="75.0" text="Nombre" />
             <TableColumn fx:id="CategoriaColumna" prefWidth="75.0" text="Categoria" />
-            <TableColumn fx:id="DispColumna" prefWidth="75.0" text="Disponibilidad" />
+            <TableColumn fx:id="DispColumna" prefWidth="75.0" text="Estado" />
          </columns>
       </TableView>
    </center>
@@ -26,7 +26,7 @@
       <SplitPane dividerPositions="0.17892976588628762" prefHeight="50.0" prefWidth="100.0" BorderPane.alignment="TOP_RIGHT">
          <items>
             <Label text="Listado de registros" />
-            <Button mnemonicParsing="false" prefHeight="28.0" prefWidth="85.0" text="Nuevo" />
+            <Button mnemonicParsing="false" onAction="#onActionTextLogin" prefHeight="28.0" prefWidth="85.0" text="Nuevo" />
          </items>
          <BorderPane.margin>
             <Insets left="350.0" top="20.0" />

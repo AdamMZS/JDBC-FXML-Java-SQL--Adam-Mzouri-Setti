@@ -1,5 +1,6 @@
 package org.example.equipo;
 
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
@@ -27,12 +28,12 @@ public class LoginController implements Initializable{
         }
     }
 
-    @FXML
-    private Button loginButton;
-
-@Override
+    @Override
 public void initialize(java.net.URL location, java.util.ResourceBundle resources) {
-    loginButton.setOnAction(event -> callMainFx());
     }
 
+    @FXML
+    public void onActionTextLogin(ActionEvent actionEvent) {
+        callMainFx();
+    }
 }
