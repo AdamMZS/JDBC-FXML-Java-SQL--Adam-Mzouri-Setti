@@ -1,5 +1,8 @@
 package org.example.equipo;
 
+import Data.DAO;
+import Data.EquipoMysqlDAO;
+import Model.Equipo;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
@@ -58,13 +61,16 @@ public class CreateController implements Initializable {
 
     @FXML
     private void guardar() {
-
+        EquipoMysqlDAO dao = new EquipoMysqlDAO();
+        DAO<Equipo> dao1 = new EquipoMysqlDAO();
+        Equipo equipo = new Equipo();
         Alert alerta = new Alert(Alert.AlertType.INFORMATION);
-
         alerta.setTitle("Guardado");
         alerta.setHeaderText("Se guardaron los cambuios correctamente");
         alerta.setContentText("Nombre:"+TextNombre.getText()+" ,Id:"+spinnerID.getValueFactory().getValue()+" ,Disponible:"+(CheckDisponible.isSelected()?"Si":"No")+" ,categoria:"+ChoiceCat.getSelectionModel().getSelectedItem());
         alerta.showAndWait();
+        equipo = new Equipo(String.valueOf(spinnerID.getValueFactory().getValue()),TextNombre.getText(),ChoiceCat.getSelectionModel().getSelectedItem(),String.valueOf(CheckDisponible.isSelected()));
+        dao.save(equipo);
 
     }
     @FXML
