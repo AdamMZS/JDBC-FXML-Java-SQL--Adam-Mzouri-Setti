@@ -8,10 +8,7 @@
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.layout.BorderPane?>
 
-<BorderPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.equipo.MainController">
-   <center>
-
-   </center>
+<BorderPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.equipo.MainController">
    <center>
       <TableView fx:id="TablaId" maxHeight="600.0" maxWidth="600.0" minHeight="200.0" minWidth="400.0" prefHeight="400.0" prefWidth="200.0">
          <columns>

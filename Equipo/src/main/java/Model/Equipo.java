@@ -18,4 +18,10 @@ public class Equipo {
         this.categoria=categoria;
         this.disponible=disponible;
     }
+    public Equipo(String nombre,String categoria,String disponible) {
+        this.id=id;
+        this.nombre=nombre;
+        this.categoria=categoria;
+        this.disponible=disponible;
+    }
 }

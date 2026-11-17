@@ -22,11 +22,11 @@ public class CreateController implements Initializable {
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         //spinner--> factory
-        spinnerID.setValueFactory(new SpinnerValueFactory.IntegerSpinnerValueFactory(1,100,1,1) {
-        });
+        //spinnerID.setValueFactory(new SpinnerValueFactory.IntegerSpinnerValueFactory(1, 100, 1, 1) {
+        //});
         //choice(table view,Listview) --> items-> selectionModel
 
-        ObservableList<String> datos= FXCollections.observableArrayList();
+        ObservableList<String> datos = FXCollections.observableArrayList();
         /* ChoiceCat.getItems().add("Laptop");
         ChoiceCat.getItems().add("Tablet");
         ChoiceCat.getItems().add("Desktop");
@@ -34,9 +34,10 @@ public class CreateController implements Initializable {
         ChoiceCat.getItems().addAll("Monitor","Hola");
         ChoiceCat.getSelectionModel().selectFirst();
         **/
-        datos.addAll("Monitor","Desktop","Laptop","Tablet");
+        datos.addAll("Monitor", "Desktop", "Laptop", "Tablet");
         ChoiceCat.setItems(datos);
     }
+
     @FXML
     private ChoiceBox<String> ChoiceCat;
     @FXML
@@ -67,20 +68,21 @@ public class CreateController implements Initializable {
         Alert alerta = new Alert(Alert.AlertType.INFORMATION);
         alerta.setTitle("Guardado");
         alerta.setHeaderText("Se guardaron los cambuios correctamente");
-        alerta.setContentText("Nombre:"+TextNombre.getText()+" ,Id:"+spinnerID.getValueFactory().getValue()+" ,Disponible:"+(CheckDisponible.isSelected()?"Si":"No")+" ,categoria:"+ChoiceCat.getSelectionModel().getSelectedItem());
+        alerta.setContentText("Nombre:" + TextNombre.getText() +  " ,Disponible:" + (CheckDisponible.isSelected() ? "Si" : "No") + " ,categoria:" + ChoiceCat.getSelectionModel().getSelectedItem());
         alerta.showAndWait();
-        equipo = new Equipo(String.valueOf(spinnerID.getValueFactory().getValue()),TextNombre.getText(),ChoiceCat.getSelectionModel().getSelectedItem(),String.valueOf(CheckDisponible.isSelected()));
+        equipo = new Equipo(TextNombre.getText(), ChoiceCat.getSelectionModel().getSelectedItem(), String.valueOf(CheckDisponible.isSelected()));
         dao.save(equipo);
 
     }
+
     @FXML
     private void onHelloButtonClick() {
         Alert alerta = new Alert(Alert.AlertType.INFORMATION);
         alerta.setContentText("Saliendo");
-        try{
+        try {
             FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("main-view.fxml"));
-            Parent root=fxmlLoader.load();
-            Stage stage=new Stage();
+            Parent root = fxmlLoader.load();
+            Stage stage = new Stage();
             stage.setScene(new Scene(root));
             stage.show();
         } catch (IOException e) {
