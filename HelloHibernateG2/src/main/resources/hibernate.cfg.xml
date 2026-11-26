@@ -10,7 +10,7 @@
         <property name="hibernate.connection.url">jdbc:mysql://localhost:3307/ad?useSSL=false&amp;serverTimezone=UTC&amp;allowPublicKeyRetrieval=true</property>
         <property name="hibernate.connection.username">user</property>
         <property name="hibernate.connection.password">pwd</property>
-
+        <property name="hibernate.current_session_context_class">thread</property>
         <!-- MySQL 8 -->
         <property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
 
